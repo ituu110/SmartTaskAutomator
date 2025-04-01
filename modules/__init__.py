@@ -1,0 +1,6 @@
+# ...existing code...
+import importlib
+
+def get_file_renamer():
+    return importlib.import_module('.file_renamer', __package__)
+# ...existing code...

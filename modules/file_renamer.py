@@ -1,7 +1,7 @@
 import os
 
 def run():
-    folder = './rename対象'
+    folder = './renamefiles'
     if not os.path.exists(folder):
         print("⚠️ 対象フォルダが見つかりません。")
         return

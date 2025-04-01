@@ -1,4 +1,7 @@
-from modules import excel_aggregator, mail_sender, file_renamer, web_scraper, scheduler
+from modules import excel_aggregator, mail_sender, web_scraper, scheduler
+from modules import get_file_renamer
+
+file_renamer = get_file_renamer()
 
 def main():
     print("=== SmartTask Automator 起動 ===")

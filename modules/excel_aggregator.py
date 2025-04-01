@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 def run():
-    folder_path = './excelデータ'
+    folder_path = './excel'
     output_path = './output/毎月の売上レポート.xlsx'
 
     if not os.path.exists(folder_path):
@@ -10,6 +10,9 @@ def run():
         return
 
     files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.xlsx')]
+    if not files:
+        print("⚠️ Excelファイルが見つかりません。")
+        return
     data = [pd.read_excel(f) for f in files]
     df = pd.concat(data, ignore_index=True)
 
